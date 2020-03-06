@@ -3,10 +3,15 @@ public class SherlockAndAnagrams {
     String s = "mission";
     int anagramSize = 1;
     int startPos = 0;
-    
-    // create the anagram
-    for(int i = 1; i < anagramSize; i++){
-      System.out.println(s.charAt(i));
+    boolean done = false;
+   
+    while(!done){
+      // create the anagram
+      for(int i = 0; i < s.length(); i++){
+        for(int j = startPos; j < startPos + anagramSize; j++){
+          System.out.println(s.charAt(j));
+        }
+      }
     }
   }
 }
