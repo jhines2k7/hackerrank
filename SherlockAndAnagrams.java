@@ -5,13 +5,18 @@ public class SherlockAndAnagrams {
     int startPos = 0;
     boolean done = false;
    
-    while(!done){
+    while(anagramSize < s.length()){
       // create the anagram
-      for(int i = 0; i < s.length(); i++){
-        for(int j = startPos; j < startPos + anagramSize; j++){
-          System.out.println(s.charAt(j));
+      for(int i = startPos; i <= anagramSize; i++){
+        for(int j = i; j < startPos + anagramSize; j++){
+          System.out.print(s.charAt(j));
         }
+          
+        System.out.println();
       }
+
+      anagramSize++;
+      startPos++;
     }
   }
 }
