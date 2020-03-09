@@ -3,20 +3,21 @@ public class SherlockAndAnagrams {
     String s = "mission";
     int anagramSize = 1;
     int startPos = 0;
-    boolean done = false;
+    int numAnagrams = s.length();
    
     while(anagramSize < s.length()){
       // create the anagram
-      for(int i = startPos; i <= anagramSize; i++){
-        for(int j = i; j < startPos + anagramSize; j++){
+      for(int i = 1; i <= numAnagrams; i++){
+        for(int j = startPos; j < startPos + anagramSize; j++){
           System.out.print(s.charAt(j));
         }
           
         System.out.println();
+        startPos++;
       }
 
       anagramSize++;
-      startPos++;
+      numAnagrams--;
     }
   }
 }
