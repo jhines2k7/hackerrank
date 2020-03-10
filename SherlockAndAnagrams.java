@@ -2,10 +2,10 @@ public class SherlockAndAnagrams {
   public static void main(String[] args){
     String s = "mission";
     int anagramSize = 1;
-    int startPos = 0;
     int numAnagrams = s.length();
    
     while(anagramSize < s.length()){
+      int startPos = 0;
       // create the anagram
       for(int i = 1; i <= numAnagrams; i++){
         for(int j = startPos; j < startPos + anagramSize; j++){
