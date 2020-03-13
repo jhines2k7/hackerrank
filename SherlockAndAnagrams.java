@@ -14,9 +14,9 @@ public class SherlockAndAnagrams {
       int startPos = 0;
       // create the anagram
       
-      anagramCharSet = new HashSet<>();
-      
       for(int i = 1; i <= numAnagrams; i++){
+        anagramCharSet = new HashSet<>();
+        
         for(int j = startPos; j < startPos + anagramSize; j++){
           //System.out.print(s.charAt(j));
     
