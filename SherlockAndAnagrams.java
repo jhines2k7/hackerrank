@@ -24,7 +24,21 @@ public class SherlockAndAnagrams {
           anagramCharSet.add(s.charAt(j));
         }
 
-        for(int k = 0; k < anagramSize)
+        int matchCount = 0;
+
+        for(int k = 0; k < s.length(); k++) {
+          for(int l = k; l < anagramSize; l++) {
+            if(anagramCharSet.contains(s.charAt(l))) {
+              matchCount++;
+            }
+          }
+
+          if(matchCount == anagramSize) {
+            anagramCount++;
+          }
+
+          matchCount = 0;
+        }
           
         //System.out.println();
         startPos++;
@@ -33,5 +47,7 @@ public class SherlockAndAnagrams {
       anagramSize++;
       numAnagrams--;
     }
+
+    System.out.println("Number of anagrams: " + anagramCount);
   }
 }
