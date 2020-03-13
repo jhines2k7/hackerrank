@@ -3,10 +3,10 @@ import java.util.Set;
 
 public class SherlockAndAnagrams {
   public static void main(String[] args){
-    String s = "mission";
+    String s = "abcd";
     int anagramSize = 1;
     int numAnagrams = s.length();
-    int anagramCount = 0;
+    int anagrammaticPairs = 0;
   
     Set<Character> anagramCharSet;
    
@@ -34,7 +34,7 @@ public class SherlockAndAnagrams {
           }
 
           if(matchCount == anagramSize) {
-            anagramCount++;
+            anagrammaticPairs++;
           }
 
           matchCount = 0;
@@ -48,6 +48,6 @@ public class SherlockAndAnagrams {
       numAnagrams--;
     }
 
-    System.out.println("Number of anagrams: " + anagramCount);
+    System.out.println("Number of anagrammatic pairs: " + anagrammaticPairs);
   }
 }
