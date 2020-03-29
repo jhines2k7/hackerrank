@@ -3,7 +3,7 @@ import java.util.Set;
 
 public class SherlockAndAnagrams {
   public static void main(String[] args){
-    String s = "abcd";
+    String s = "mom";
     int anagramSize = 1;
     int numAnagrams = s.length();
     int anagrammaticPairs = 0;
@@ -18,29 +18,29 @@ public class SherlockAndAnagrams {
         anagramCharSet = new HashSet<>();
         
         for(int j = startPos; j < startPos + anagramSize; j++){
-          //System.out.print(s.charAt(j));
+          System.out.print(s.charAt(j));
     
           // create the anagram hash set
           anagramCharSet.add(s.charAt(j));
         }
 
-        int matchCount = 0;
+        int numMatchingChars = 0;
 
         for(int k = 0; k < s.length(); k++) {
           for(int l = k; l < anagramSize; l++) {
             if(anagramCharSet.contains(s.charAt(l))) {
-              matchCount++;
+              numMatchingChars++;
             }
           }
 
-          if(matchCount == anagramSize) {
+          if(numMatchingChars == anagramSize) {
             anagrammaticPairs++;
           }
 
-          matchCount = 0;
+          numMatchingChars = 0;
         }
           
-        //System.out.println();
+        System.out.println();
         startPos++;
       }
 
